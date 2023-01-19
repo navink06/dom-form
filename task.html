@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+      div{
+       margin-left: 500px;
+       margin-top: 100px;
+       width: 500px;
+       height: 500px;
+       border-radius: 40px;
+      }
+      #user{
+        list-style-type: none;
+        margin-top: 10px;
+        color: azure;
+        margin-left: 500px;
+        width: 450px;
+        
+      }
+      li{
+        
+        background-color: black;
+        margin-top: 10px;
+      }
+      form{
+        padding-top: 40px;
+      }
+      label{
+        margin-left: 110px;
+        padding-bottom: 30px;
+      }
+      input{
+        margin-left:30px ;
+      }
+      input#y{
+        margin-left: 20px;
+      }
+     textarea, input#o{
+        margin-left: 40px;
+      }
+     
+      textarea{
+        margin-left: 200px;
+        margin-top: -20px;
+      }
+      #l{
+        margin-left: 200px;
+        margin-bottom: 200px;
+        width: 140px;
+        height: 50px;
+      
+      }
+     #q{
+        margin-left: 150px;
+        
+      }
+      h1{
+        margin-left: 200px;
+        margin-top: 100px;
+        padding-top: 20px;
+      }
+      
+    </style>
+   
+</head>
+<body>
+  <p id="college"></p>
+   <div style="background-color: rgb(96, 98, 123);"> 
+    <h1>User Login</h1> 
+  <form  onsubmit="sample(event)" id="raj" >
+    <label for="navin">Name</label>
+    <input  type="text" placeholder="enter the name" id="name"> <br><br>
+    <label for="navin">Email</label>
+    <input type="email" name="" id="email" placeholder="enter the email"> <br> <br>
+    <label for="navin">Password</label>
+    <input  type="password" name="" id="password" placeholder="enter the password"> <br><br>
+    <label for="navin">Number</label>
+    <input type=" phone number" placeholder="number" id="phone number"> <br> <br>
+    <label for="navin" id="navin">Address</label>
+    <textarea name="" id="textarea" cols="30" rows="3"></textarea> <br> <br>
+    <label for="navin">Gender</label> 
+    <input type="radio" name="male" id="radio" >Male
+    <input type="radio" name="male" id="radio" >female <br> <br>
+    <input type="checkbox" name="" id="checkbox"> I confirm that all data are correct  <br> <br>
+    <input type="submit" value="submit" id="banu">
+   </form>
+  </div> <br>
+  <ul id="user"></ul> 
+       
+    
+    
+</body>
+</html>
+
+<script>
+ 
+ const userlist=document.querySelector("#user")
+  
+function sample(e){
+
+  e.preventDefault();
+  // console.log(e);
+let a=document.getElementById('name');
+let b=document.getElementById('email');
+let c=document.getElementById('password');
+let d=document.getElementById('phone number');
+let kk=document.getElementById('textarea');
+let f=document.getElementById('radio');
+let g=document.getElementById('checkbox');
+
+// console.log(a.value);
+// console.log(b.value);
+// console.log(c.value);
+// console.log(d.value);
+// console.log(kk.value);
+// console.log(f.value);
+// console.log(g.value);
+  var p=""
+ if(a.value==p ){
+  alert("enter the name");
+ }
+ else if(b.value==p){
+  alert("enter the email ")
+ }
+ else if(c.value==p){
+  alert("enter the email ")
+ }
+ else if(d.value==p){
+  alert("enter the email ")
+ }
+ else if(e.value==p){
+  alert("enter the email ")
+ }
+ else if(kk.value==p){
+  alert("enter the email ")
+ }
+ else{
+// console.log(a.value);
+// console.log(b.value);
+// console.log(c.value);
+// console.log(d.value);
+// console.log(kk.value);
+// console.log(f.value);
+// console.log(g.value);
+const li=document.createElement("li")
+li.appendChild(document.createTextNode(`${a.value}:${b.value}:${c.value}:${d.value}:${kk.value}:${f.value}:${g.value} `))
+userlist.appendChild(li)
+ }
+
+ document.getElementById("raj").reset();
+
+      
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
